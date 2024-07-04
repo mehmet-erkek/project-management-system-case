@@ -1,0 +1,26 @@
+<div class="task-edit">
+    <h1>Edit Task</h1>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <label for="title">Task Title:</label>
+      <input id="title" formControlName="title" type="text">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      
+      <label for="assignee">Assignee:</label>
+      <input id="assignee" formControlName="assignee" type="text">
+      
+      <label for="dueDate">Due Date:</label>
+      <input id="dueDate" formControlName="dueDate" type="date">
+      
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="To Do">To Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+      </select>
+      
+      <button type="submit">Update Task</button>
+    </form>
+  </div>
+  

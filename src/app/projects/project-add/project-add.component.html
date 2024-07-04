@@ -1,0 +1,26 @@
+<div class="project-add">
+    <h1>Add New Project</h1>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+      <label for="name">Project Name:</label>
+      <input id="name" formControlName="name" type="text">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      
+      <label for="startDate">Start Date:</label>
+      <input id="startDate" formControlName="startDate" type="date">
+      
+      <label for="endDate">End Date:</label>
+      <input id="endDate" formControlName="endDate" type="date">
+      
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      
+      <button type="submit">Add Project</button>
+    </form>
+  </div>
+  
